@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  python_app:
+    image: python_course
+    build:
+      context: ./python_course
+      dockerfile: ./Dockerfile
+    ports:
+      - 5000:5000
+  react_app:
+    image: my-app
+    build:
+      context: ./my-app
+      dockerfile: ./Dockerfile
+    ports:
+      - 3000:3000

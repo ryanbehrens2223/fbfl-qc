@@ -1,19 +1,19 @@
 import re
 
-hand = open('mbox-short.txt')
-for line in hand:
-    line = line.rstrip()
-    if line.find('From ') >= 0:
-        print(line)
-print("-------------------------------------------")
+# hand = open('mbox-short.txt')
+# for line in hand:
+#     line = line.rstrip()
+#     if line.find('From ') >= 0:
+#         print(line)
+# print("-------------------------------------------")
 
-hand2 = open('mbox-short.txt')
-for line2 in hand2:
-    line2 = line2.rstrip()
-    if re.findall('\$[0-9]+', line2):
-        print(line2)
+# hand2 = open('mbox-short.txt')
+# for line2 in hand2:
+#     line2 = line2.rstrip()
+#     if re.findall('\$[0-9]+', line2):
+#         print(line2)
 
-hand3 = open('mbox-short.txt')
+# hand3 = open('mbox-short.txt')
 random = """
 Why should you learn to write programs? 7746
 12 1929 8827
@@ -28,11 +28,11 @@ numlist = list()
 for line3 in random:
     line3 = line3.rstrip()
     stuff = re.findall('[0-9]+', line3)
-    if len(stuff) == 1 : continue
-    num = float(stuff[0])
+    if len(stuff) != 1 : continue
+    num = int(stuff[0])
     numlist.append(num)
 print('Sum: ', sum(numlist))
 
-x = 'From: Using the : character'
-y = re.findall('\S+?@\S+', x)
-print(y)
+# x = 'From: Using the : character'
+# y = re.findall('\S+?@\S+', x)
+# print(y)
