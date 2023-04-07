@@ -10,7 +10,7 @@ url = input('Enter: ')
 html = urllib.request.urlopen(url, context=ctx).read()
 soup = BeautifulSoup(html, 'html.parser')
 
-tags = soup('span')
+tags = soup('li')
 datalist = list()
 total = 0
 for tag in tags:
