@@ -1,10 +1,12 @@
-import logo from './FBFL_Logo.jpeg';
-import './App.css';
+//import logo from './FBFL_Logo.jpeg';
+import './css/tooplate-wave-cafe.css';
+import Scoreboard from './Scoreboard';
+import Matchup from './Match';
 
 function App() {
   return (
     <div className="App">
-      <div class="flip-card">
+{/*       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <img src={logo} className="App-logo-flip" alt="logo" />
@@ -23,6 +25,12 @@ function App() {
             </a>
           </div>
         </div>
+      </div> */}
+      <div class="Scoreboard">
+        <Scoreboard />
+      </div>
+      <div class="Matchup">
+        <Matchup />
       </div>
     </div>
   );
