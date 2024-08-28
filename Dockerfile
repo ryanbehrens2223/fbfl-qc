@@ -13,9 +13,6 @@ RUN npm install
 # Copy the rest of the application code to the container
 COPY . .
 
-# Ensure the public directory is copied
-COPY my-app/public ./public
-
 # Build the React app
 RUN npm run build
 
