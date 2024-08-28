@@ -1,0 +1,51 @@
+.home {
+    font-family: Arial, sans-serif;
+  }
+  
+  .hero {
+    background-image: url('/Users/ryanbehrens23/GitHub/fbfl-qc-code/my-app/src/img/FBFL_Logo.jpeg'); /* Ensure this path is correct */
+    background-repeat: repeat;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+  }
+  
+  .hero-content {
+    background: rgba(255, 1, 1, 0.802); /* Optional: Add a semi-transparent background */
+    padding: 20px;
+    border-radius: 20px;
+    align-self: flex-start;
+  }
+  
+  .intro {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .intro .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .intro h2 {
+    margin-bottom: 20px;
+  }
+  
+  .intro p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .features {
+    background: #f20707;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .features .feature button {
+    margin-top: 20px;
+    background-color: blue;
+  }

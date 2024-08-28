@@ -1,0 +1,19 @@
+/* custom.css */
+.custom-header {
+  background-color: rgb(219, 22, 22); /* Change the background color */
+}
+
+.custom-logo {
+  font-weight: bold;
+  color: #333;
+}
+
+.custom-nav-link {
+  color: #0040ff !important; /* Change the text color */
+  margin-left: 15px; /* Add space between tabs */
+  text-decoration: none;
+}
+
+.custom-nav-link:hover {
+  text-decoration: underline;
+}

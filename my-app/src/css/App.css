@@ -1,34 +1,21 @@
+/* General App styles */
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 30vmin;
-  width: 30vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
+/* Header styles */
 .App-header {
   background-color: #1c09c7;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: baseline;
   font-size: calc(50px + 2vmin);
   color: rgb(249, 20, 20);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
+/* Keyframes for logo spin animation */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -38,33 +25,20 @@
   }
 }
 
-.App-link-flip {
-  color: #61dafb;
-}
-
-@keyframes App-logo-flip {
-  from {
-    transform: rotateY(0deg);
-  }
-  to {
-    transform: rotateY(180deg);;
-  }
-}
-
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+/* Flip card container */
 .flip-card {
   background-color: #1c09c7;
   min-height: 100vh;
   display: inline-flex;
   flex-direction: column;
-  align-items: left;
+  align-items: flex-start; /* Changed from left to flex-start */
   justify-content: baseline;
   font-size: calc(50px + 2vmin);
   color: rgb(249, 20, 20);
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
-/* This container is needed to position the front and back side */
+/* Flip card inner container */
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -74,12 +48,12 @@
   transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
+/* Flip card hover effect */
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
 
-/* Position the front and back side */
+/* Front and back side positioning */
 .flip-card-front, .flip-card-back {
   position: absolute;
   width: 100%;
@@ -88,15 +62,43 @@
   backface-visibility: hidden;
 }
 
-/* Style the front side (fallback if image is missing) */
+/* Front side styling */
 .flip-card-front {
   background-color: #bbb;
   color: black;
 }
 
-/* Style the back side */
+/* Back side styling */
 .flip-card-back {
   background-color: dodgerblue;
   color: rgb(179, 9, 9);
   transform: rotateY(180deg);
+}
+/* Header styles */
+.custom-header {
+  background-color: #1c09c7;
+  border-bottom: 1px solid #eaeaea;
+}
+
+/* Navigation link styles */
+.custom-nav-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.custom-nav-link:hover {
+  color: #ffcc00;
+}
+
+/* Logo styles */
+.custom-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.custom-logo:hover {
+  color: #ffcc00;
 }

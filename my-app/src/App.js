@@ -1,38 +1,34 @@
-//import logo from './FBFL_Logo.jpeg';
-import './css/tooplate-wave-cafe.css';
+import React from 'react';
+import { ThemeProvider } from '@mui/material/styles';
+import theme from './theme';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Container, CssBaseline } from '@mui/material';
+import Navbar from './Navbar';
+import Footer from './Footer';
+import DraftInfo from './DraftInfo';
+import Lineup from './Lineup';
 import Scoreboard from './Scoreboard';
-import Matchup from './Match';
+import Home from './Home';
 
 function App() {
   return (
-    <div className="App">
-{/*       <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <img src={logo} className="App-logo-flip" alt="logo" />
-          </div>
-          <div class="flip-card-back">
-            <p>
-              HALEY BEHRENS
-            </p>
-            <a
-              className="App-logo-flip"
-              href="https://rbear17.wixsite.com/fbfl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              DAD & MOM
-            </a>
-          </div>
+    <ThemeProvider theme={theme}>
+      <Router>
+        <CssBaseline />
+        <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+          <Navbar />
+          <Container style={{ flex: '1' }}>
+            <Routes>
+              <Route path="/" exact component={Home} />
+              <Route path="/lineup" component={Lineup} />
+              <Route path="/scoreboard" component={Scoreboard} />
+              <Route path="/draft-info" component={DraftInfo} />
+            </Routes>
+          </Container>
+          <Footer style={{ flexShrink: '0' }} />
         </div>
-      </div> */}
-      <div class="Scoreboard">
-        <Scoreboard />
-      </div>
-      <div class="Matchup">
-        <Matchup />
-      </div>
-    </div>
+      </Router>
+    </ThemeProvider>
   );
 }
 
